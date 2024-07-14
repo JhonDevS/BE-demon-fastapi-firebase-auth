@@ -1,11 +1,8 @@
 from fastapi import FastAPI
 from router import auth_routes
-# pip install firebase-admin
-import firebase_admin
-from firebase_admin import credentials
 from fastapi.middleware.cors import CORSMiddleware
 from config import get_settings
-import os
+from service.config_firebase import init_service
 
 app = FastAPI()
 app.include_router(auth_routes.router)
@@ -18,6 +15,5 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+init_service()
 
-cred = credentials.Certificate(get_settings().credential_fire_base)
-firebase_admin.initialize_app(cred)
