@@ -7,4 +7,5 @@ __pycache__/
 .vscode/
 .venv/
 service-account.json
+firebase_config.json
 .env
