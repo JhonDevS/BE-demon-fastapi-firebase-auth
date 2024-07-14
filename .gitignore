@@ -6,5 +6,5 @@ __pycache__/
 .idea/
 .vscode/
 .venv/
-fir-fast-api-firebase-adminsdk-gikcy-68eb425627.json
+service-account.json
 .env
